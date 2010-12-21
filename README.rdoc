@@ -1,16 +1,53 @@
-= rack_restrictor
+= Rack::Restriction 
+En gros :
 
-Description goes here.
+Rack::Restriction est un middleware qui vous permet de restreindre l'accés à votre application à une plage d'adresss IP.
+
+== Pourquoi Rack::Restrictor ?
+
+On a une application intranet, et qui ne doit être accéssible qu'à certains postes. Comment faire ?
+Ben .... Rack::Restrictor est là pour ça.
+
+
+== Comment Rack::Restrictor le fait-il ?
+
+La réponse .... 
+<pre>
+<code>
+
+# exemple.ru 
+
+require 'rubygems'
+require 'rack_restrictor'
+
+class MonApp
+  
+  def call(env)
+    [200, {"Content-Type" => "text/plain"}, "Hello wolrd"]
+  end
+
+end
+
+use Rack::Restrictor, "192.168.1.1/24"
+
+run MonApp.new
+
+</code>
+# Et lancez le programme avec l'outil "rackup"
+
+# rackup exemple.ru -p 3000
+
+# Allez sur http://localhost:3000
+</pre>
+
+MonApp ne sera accessible qu'aux postes se trouvant sur cette plage d'adresses.
+
+== Moi 
+
+Twitter: @hassanemoustaph
 
 == Contributing to rack_restrictor
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
-* Fork the project
-* Start a feature/bugfix branch
-* Commit and push until you are happy with your contribution
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+Vous voulez contribuer ?
 
 == Copyright
 

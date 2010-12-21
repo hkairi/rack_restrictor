@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "rack_restrictor"
   gem.homepage = "http://github.com/hkairi/rack_restrictor"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Rack::Restrictor}
+  gem.description = %Q{Matriser l'acces a vos applications}
   gem.email = "hassanemoustapha@gmail.com"
   gem.authors = ["Hassane Moustapha"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,

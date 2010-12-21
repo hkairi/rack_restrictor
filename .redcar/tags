@@ -1,0 +1,9 @@
+1292937098
+PAGE_CODE	/home/hassane/ruby_apps/rack_restrictor/lib/rack_restrictor.rb			PAGE_CODE =
+Rack	/home/hassane/ruby_apps/rack_restrictor/lib/rack_restrictor.rb	module Rack
+Restrictor	/home/hassane/ruby_apps/rack_restrictor/lib/rack_restrictor.rb	  class Restrictor
+TestCase	/home/hassane/ruby_apps/rack_restrictor/test/helper.rb	class Test::Unit::TestCase
+TestRackRestrictor	/home/hassane/ruby_apps/rack_restrictor/test/test_rack_restrictor.rb	class TestRackRestrictor 
+authorized?	/home/hassane/ruby_apps/rack_restrictor/lib/rack_restrictor.rb		def authorized?( ip )
+call	/home/hassane/ruby_apps/rack_restrictor/lib/rack_restrictor.rb		def call(env)
+initialize	/home/hassane/ruby_apps/rack_restrictor/lib/rack_restrictor.rb		def initialize(app, plage)
